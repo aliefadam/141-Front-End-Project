@@ -157,6 +157,11 @@ nav a img {
     height: 20px;
 }
 
+img.mata,
+img.mata2 {
+    cursor: pointer;
+}
+
 .container .form .tengah .kanan .input.gambar input {
     font-size: 12px;
     border: none;

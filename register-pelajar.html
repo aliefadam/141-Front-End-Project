@@ -69,13 +69,13 @@
                             </div>
                             <div class="input gambar">
                                 <img src="imgs/lock.png" alt="" />
-                                <input type="text" name="" id="kata-sandi" placeholder="Masukkan Kata Sandi" />
-                                <img src="imgs/eye.png" alt="" />
+                                <input type="password" name="" id="kata-sandi" placeholder="Masukkan Kata Sandi" />
+                                <img onclick="aksi()" class="mata" src="imgs/eye-slash.png" alt="" />
                             </div>
                             <div class="input gambar">
                                 <img src="imgs/lock.png" alt="" />
-                                <input type="text" name="" id="ulangi-kata-sandi" placeholder="Ulangi Kata Sandi" />
-                                <img src="imgs/eye.png" alt="" />
+                                <input type="password" name="" id="ulangi-kata-sandi" placeholder="Ulangi Kata Sandi" />
+                                <img onclick="aksi2()" class="mata2" src="imgs/eye-slash.png" alt="" />
                             </div>
                         </div>
                     </div>
@@ -89,5 +89,31 @@
             </div>
         </div>
         <script src="js/bootstrap.js"></script>
+        <script>
+            let img = document.querySelector("img.mata");
+            let img2 = document.querySelector("img.mata2");
+            let input = document.getElementById("kata-sandi");
+            let input2 = document.getElementById("ulangi-kata-sandi");
+
+            function aksi() {
+                if (input.type == "text") {
+                    input.type = "password";
+                    img.src = "imgs/eye-slash.png";
+                } else {
+                    input.type = "text";
+                    img.src = "imgs/eye.png";
+                }
+            }
+
+            function aksi2() {
+                if (input2.type == "text") {
+                    input2.type = "password";
+                    img2.src = "imgs/eye-slash.png";
+                } else {
+                    input2.type = "text";
+                    img2.src = "imgs/eye.png";
+                }
+            }
+        </script>
     </body>
 </html>

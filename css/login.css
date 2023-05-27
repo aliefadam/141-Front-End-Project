@@ -40,7 +40,7 @@ body {
 .konten .kiri img.orang {
     position: absolute;
     z-index: 3;
-    top: 150px;
+    top: calc((100vh / 2) - 200px);
     left: 150px;
     width: 350px;
 }
@@ -141,6 +141,10 @@ body {
 .konten .kanan .login form .input img {
     width: 20px;
     height: 20px;
+}
+
+img.mata {
+    cursor: pointer;
 }
 
 .konten .kanan form a {
