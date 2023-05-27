@@ -111,16 +111,36 @@ body {
     margin-bottom: 5px;
 }
 
-.konten .kanan .login form input {
+.konten .kanan .login form .input {
     font-size: 12px;
     width: 100%;
     border-radius: 5px;
     outline: none;
     border: 1px solid #396eb0;
     height: 38px;
-    padding-left: 30px;
+    padding-left: 10px;
     background-color: #f7f7f7;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.konten .kanan .login form .input input {
+    width: 90%;
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.konten .kanan .login form .input input[id="password"] {
+    width: 80%;
+}
+
+.konten .kanan .login form .input img {
+    width: 20px;
+    height: 20px;
 }
 
 .konten .kanan form a {

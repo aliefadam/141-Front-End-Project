@@ -148,7 +148,7 @@ nav .dropdown-menu {
 }
 
 .container .kiri {
-    width: 80%;
+    width: 100%;
 }
 
 .container .kiri .atas {
@@ -168,87 +168,26 @@ nav .dropdown-menu {
 }
 
 .container .kiri .bawah {
-    margin-top: 30px;
-    margin-left: 70px;
-    color: black;
-}
-
-.container .kiri .bawah h5 {
-    font-family: "Poppins-SemiBold";
-    font-size: 14px;
-}
-
-.container .kiri .bawah h3 {
     margin-top: 20px;
-    font-family: "Poppins-SemiBold";
-    font-size: 18px;
-}
-
-.container .kiri .bawah .soal {
-    margin-top: 20px;
-}
-
-.container .kiri .bawah .soal p {
-    font-size: 15px;
-}
-
-.container .kiri .bawah .soal ul {
-    padding-left: 2%;
-    margin-top: -10px;
-}
-
-.container .kiri .bawah .soal ul li {
-    font-size: 13px;
-    list-style-type: none;
-}
-
-.container .kiri .bawah .soal ul li input {
-    margin-right: 10px;
-}
-
-.container .kiri .bawah .next {
+    width: fit-content;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    flex-direction: column;
 }
 
-.submit {
-    background-color: #396eb0 !important;
-    cursor: pointer;
+.container .kiri .bawah img {
+    width: 400px;
 }
 
-.submit span {
-    color: white !important;
-    letter-spacing: 1.2px;
-}
-
-.container .kiri .bawah .next a.btn.next {
-    width: 250px;
-    height: 36px;
-    border: 1px solid #396eb0;
-    background-color: #e9ebf8;
-    display: flex;
-    justify-content: space-around;
-}
-
-.container .kiri .bawah .next a.btn.next .tengah {
-    width: calc(100%);
-}
-
-.container .kiri .bawah .next a.btn.next .kanan {
-    width: fit-content;
-}
-
-.container .kiri .bawah .next a.btn.next span {
-    font-size: 13px;
+.container .kiri .bawah a {
+    background-color: #396eb0;
+    color: white;
+    width: 400px;
+    font-size: 12px;
     font-family: "Poppins-SemiBold";
-    color: #396eb0;
-}
-
-.container .kiri .bawah .next a.btn.next img {
-    width: 20px;
+    letter-spacing: 1.2px;
 }
 
 footer {

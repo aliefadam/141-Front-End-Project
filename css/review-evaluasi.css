@@ -90,57 +90,6 @@ nav .dropdown-menu {
     border-radius: 15px;
 }
 
-.bg-konfirmasi {
-    z-index: 9999;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(31, 61, 97, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.bg-konfirmasi .box {
-    width: 370px;
-    background-color: white;
-    padding: 20px;
-    border-radius: 20px;
-}
-
-.bg-konfirmasi .box p {
-    margin-bottom: 40px;
-    text-align: center;
-    font-family: "Poppins-SemiBold";
-    font-size: 15px;
-}
-
-.bg-konfirmasi .box .tombol {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.bg-konfirmasi .box a.btn {
-    width: calc(50% - 20px);
-    margin: 0 5px 0 5px;
-    font-size: 13px;
-    font-family: "Poppins-SemiBold";
-}
-
-.bg-konfirmasi .box a.btn.batal {
-    background-color: #e9ebf8;
-    border: 1px solid #396eb0;
-    color: #396eb0;
-}
-
-.bg-konfirmasi .box a.btn.daftar {
-    background-color: #396eb0;
-    color: white;
-}
-
 .container.kotak {
     margin-top: 100px;
     display: flex;
@@ -164,13 +113,24 @@ nav .dropdown-menu {
 .container .kiri .atas .title span {
     font-family: "Poppins-Bold";
     font-size: 30px;
-    margin-left: 15px;
 }
 
 .container .kiri .bawah {
-    margin-top: 30px;
-    margin-left: 70px;
+    margin-top: 10px;
     color: black;
+    padding-bottom: 150px;
+}
+
+.container .kiri .bawah div.selesaikan {
+    margin-top: 80px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container .kiri .bawah a.selesaikan {
+    font-size: 15px;
+    text-decoration: none;
+    color: #396eb0;
 }
 
 .container .kiri .bawah h5 {
@@ -186,6 +146,22 @@ nav .dropdown-menu {
 
 .container .kiri .bawah .soal {
     margin-top: 20px;
+    margin-left: 20px;
+}
+
+.container .kiri .bawah .soal h4 {
+    font-size: 15px;
+    font-family: "Poppins-SemiBold";
+}
+
+.benar {
+    color: #42ad3a !important;
+    font-family: "Poppins-SemiBold";
+}
+
+.salah {
+    color: #ff4128 !important;
+    font-family: "Poppins-SemiBold";
 }
 
 .container .kiri .bawah .soal p {
@@ -205,23 +181,11 @@ nav .dropdown-menu {
 .container .kiri .bawah .soal ul li input {
     margin-right: 10px;
 }
-
 .container .kiri .bawah .next {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    margin-top: 20px;
-}
-
-.submit {
-    background-color: #396eb0 !important;
-    cursor: pointer;
-}
-
-.submit span {
-    color: white !important;
-    letter-spacing: 1.2px;
 }
 
 .container .kiri .bawah .next a.btn.next {
@@ -248,7 +212,7 @@ nav .dropdown-menu {
 }
 
 .container .kiri .bawah .next a.btn.next img {
-    width: 20px;
+    width: 25px;
 }
 
 footer {
