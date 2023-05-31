@@ -90,6 +90,57 @@ nav .dropdown-menu {
     border-radius: 15px;
 }
 
+.bg-konfirmasi {
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(31, 61, 97, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-konfirmasi .box {
+    width: 370px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.bg-konfirmasi .box p {
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: "Poppins-SemiBold";
+    font-size: 15px;
+}
+
+.bg-konfirmasi .box .tombol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-konfirmasi .box a.btn {
+    width: calc(50% - 20px);
+    margin: 0 5px 0 5px;
+    font-size: 13px;
+    font-family: "Poppins-SemiBold";
+}
+
+.bg-konfirmasi .box a.btn.batal {
+    background-color: #e9ebf8;
+    border: 1px solid #396eb0;
+    color: #396eb0;
+}
+
+.bg-konfirmasi .box a.btn.daftar {
+    background-color: #396eb0;
+    color: white;
+}
+
 .container.kotak {
     margin-top: 100px;
     display: flex;
@@ -120,6 +171,25 @@ nav .dropdown-menu {
     margin-top: 30px;
     margin-left: 70px;
     color: black;
+}
+
+.container .kiri .bawah .waktu {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 8px;
+}
+
+.container .kiri .bawah .waktu .kiri {
+    width: fit-content;
+    margin-right: 10px;
+}
+
+.container .kiri .bawah .waktu .kanan span {
+    font-family: "Poppins-SemiBold";
+    color: #396eb0;
 }
 
 .container .kiri .bawah h5 {
@@ -199,6 +269,16 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.submit {
+    background-color: #396eb0 !important;
+    cursor: pointer;
+}
+
+.submit span {
+    color: white !important;
+    letter-spacing: 1.2px;
 }
 
 footer .kiri {
