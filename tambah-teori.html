@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dashboard - Instruktur</title>
+        <link rel="stylesheet" href="css/tambah-teori.css" />
+        <link rel="stylesheet" href="css/bootstrap.css" />
+    </head>
+    <body>
+        <!-- navbar -->
+        <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="imgs/image 2.png" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item gambar">
+                            <img src="imgs/home.png" alt="" />
+                            <a class="nav-link" href="dashboard-instruktur.html">BERANDA</a>
+                        </li>
+                        <li class="nav-item dropdown gambar warna">
+                            <img src="imgs/book.png" alt="" />
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">COURSE</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="pengetahuan-kompononen-instuktur.html">Pengetahuan Komponen</a></li>
+                                <li><a class="dropdown-item" href="daftar-materi-pemahaman-instruktur.html">Pengetahuan Teori</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item gambar">
+                            <img src="imgs/messages.png" alt="qna" />
+                            <a class="nav-link" href="qna.html">Q & A</a>
+                        </li>
+                        <li class="nav-item gambar">
+                            <img src="imgs/task-square.png" alt="" />
+                            <a href="quiz.html" class="nav-link">KUIS</a>
+                        </li>
+                        <li class="nav-item">
+                            <div>
+                                <img src="imgs/Ellipse 21.png" alt="" />
+                            </div>
+                            <div>
+                                <span>John Doe</span>
+                                <span>Instuktur</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- akhir navbar -->
+
+        <div class="container kotak">
+            <div class="keterangan">
+                <div class="tombol-back">
+                    <a href="dashboard-instruktur.html">
+                        <img src="imgs/arrow-left.png" alt="" />
+                    </a>
+                    <h1>Tambah Teori</h1>
+                </div>
+
+                <div class="tombol-aksi">
+                    <a href="" class="btn selesai">Selesai</a>
+                    <a href="dashboard-instruktur.html" class="btn batal">Batal</a>
+                </div>
+            </div>
+
+            <div class="editor">
+                <form action="">
+                    <input class="judul" type="text" placeholder="Tambahkan Judul" />
+                </form>
+                <div class="editor-detail">
+                    <img src="imgs/Inline Editor.png" alt="" />
+                    <form action="">
+                        <textarea name="" id="" placeholder="Mulai tambahkan materi"></textarea>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer"></div>
+    </body>
+    <script src="js/loadHtml.js"></script>
+    <script src="js/bootstrap.js"></script>
+</html>
