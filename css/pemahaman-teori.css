@@ -227,6 +227,12 @@ nav .dropdown-menu {
     margin-bottom: 0;
 }
 
+.container .pemahaman a.lanjutkan {
+    font-size: 15px !important;
+    background: none !important;
+    padding: 0 !important;
+}
+
 .container .cari-course {
     display: flex;
     align-items: center;
