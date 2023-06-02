@@ -4,11 +4,21 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Daftar Pemahaman Teori - Instruktur</title>
-        <link rel="stylesheet" href="css/daftar-pemahaman-teori-instruktur.css" />
+        <title>Kuis - Instruktur</title>
+        <link rel="stylesheet" href="css/kuis-instruktur.css" />
         <link rel="stylesheet" href="css/bootstrap.css" />
     </head>
     <body>
+        <div class="bg-konfirmasi" style="display: none">
+            <div class="box">
+                <p>Anda yakin ingin menghapus corse pemahaman komponen ini?</p>
+                <div class="tombol">
+                    <a onclick="daftar()" class="daftar btn">Ya</a>
+                    <a onclick="tutup()" class="batal btn">Tidak</a>
+                </div>
+            </div>
+        </div>
+
         <!-- navbar -->
         <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
             <div class="container">
@@ -24,7 +34,7 @@
                             <img src="imgs/home.png" alt="" />
                             <a class="nav-link" href="dashboard-instruktur.html">BERANDA</a>
                         </li>
-                        <li class="nav-item dropdown gambar warna">
+                        <li class="nav-item dropdown gambar">
                             <img src="imgs/book.png" alt="" />
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">COURSE</a>
                             <ul class="dropdown-menu">
@@ -36,7 +46,7 @@
                             <img src="imgs/messages.png" alt="qna" />
                             <a class="nav-link" href="qna.html">Q & A</a>
                         </li>
-                        <li class="nav-item gambar">
+                        <li class="nav-item gambar warna">
                             <img src="imgs/task-square.png" alt="" />
                             <a href="quis-instruktur.html" class="nav-link">KUIS</a>
                         </li>
@@ -58,14 +68,14 @@
         <div class="container kotak">
             <div class="title">
                 <div class="judul">
-                    <h1>Daftar Materi Pemahaman Teori</h1>
+                    <h1>Kuis</h1>
                 </div>
             </div>
 
             <div class="menu">
                 <div class="kiri">
                     <p>
-                        <span><a href="dashboard-instruktur.html">Dashboard</a> / </span> Pemahaman Teori
+                        <span><a href="dashboard-instruktur.html">Dashboard</a> / </span> Kuis
                     </p>
                 </div>
             </div>
@@ -76,11 +86,11 @@
                     <div class="form">
                         <img src="imgs/search.png" alt="" />
                         <form action="">
-                            <input type="text" name="" id="" placeholder="Judul Course" />
+                            <input type="text" name="" id="" placeholder="Topik Kuis" />
                         </form>
                     </div>
                 </div>
-                <a href="tambah-teori.html" class="btn">+ Materi Baru</a>
+                <a href="tambah-kuis.html" class="btn">+ Kuis Baru</a>
             </div>
 
             <div class="courses">
@@ -89,20 +99,26 @@
                     <div class="course-keterangan">
                         <div class="atas">
                             <h3>Bahan Semikonduktor</h3>
-                            <a href="" class="btn">Pemahaman Teori</a>
+
                             <a class="pilihan" onclick="tampilkan(1)">
                                 <img src="imgs/dots.png" alt="" />
                             </a>
                             <div class="dropdown dropdown1" style="display: none">
                                 <span><a href="edit-teori.html">Edit</a></span>
-                                <span><a href="">Hapus</a></span>
+                                <span><a onclick="konfirmasi()">Hapus</a></span>
                             </div>
                         </div>
                         <p class="created">Dibuat pada : 25 Maret 2023</p>
-                        <p class="topik">18 Sub Topik</p>
-                        <a href="daftar-enroll.html" style="text-decoration: none">
-                            <p class="terdaftar text-center">34 Terdaftar</p>
-                        </a>
+                        <div class="detail">
+                            <div class="soal">
+                                <img src="imgs/brush.png" alt="" />
+                                <span>35 Soal</span>
+                            </div>
+                            <div class="waktu">
+                                <img src="imgs/clock.png" alt="" />
+                                <span>01 : 30 : 00</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="course-detail">
@@ -110,18 +126,26 @@
                     <div class="course-keterangan">
                         <div class="atas">
                             <h3>Bahan Semikonduktor</h3>
-                            <a href="" class="btn">Pemahaman Teori</a>
+
                             <a class="pilihan" onclick="tampilkan(2)">
                                 <img src="imgs/dots.png" alt="" />
                             </a>
                             <div class="dropdown dropdown2" style="display: none">
                                 <span><a href="edit-teori.html">Edit</a></span>
-                                <span><a href="">Hapus</a></span>
+                                <span><a onclick="konfirmasi()">Hapus</a></span>
                             </div>
                         </div>
                         <p class="created">Dibuat pada : 25 Maret 2023</p>
-                        <p class="topik">18 Sub Topik</p>
-                        <p class="terdaftar text-center">34 Terdaftar</p>
+                        <div class="detail">
+                            <div class="soal">
+                                <img src="imgs/brush.png" alt="" />
+                                <span>35 Soal</span>
+                            </div>
+                            <div class="waktu">
+                                <img src="imgs/clock.png" alt="" />
+                                <span>01 : 30 : 00</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="course-detail">
@@ -129,18 +153,26 @@
                     <div class="course-keterangan">
                         <div class="atas">
                             <h3>Bahan Semikonduktor</h3>
-                            <a href="" class="btn">Pemahaman Teori</a>
+
                             <a class="pilihan" onclick="tampilkan(3)">
                                 <img src="imgs/dots.png" alt="" />
                             </a>
                             <div class="dropdown dropdown3" style="display: none">
                                 <span><a href="edit-teori.html">Edit</a></span>
-                                <span><a href="">Hapus</a></span>
+                                <span><a onclick="konfirmasi()">Hapus</a></span>
                             </div>
                         </div>
                         <p class="created">Dibuat pada : 25 Maret 2023</p>
-                        <p class="topik">18 Sub Topik</p>
-                        <p class="terdaftar text-center">34 Terdaftar</p>
+                        <div class="detail">
+                            <div class="soal">
+                                <img src="imgs/brush.png" alt="" />
+                                <span>35 Soal</span>
+                            </div>
+                            <div class="waktu">
+                                <img src="imgs/clock.png" alt="" />
+                                <span>01 : 30 : 00</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="course-detail">
@@ -148,18 +180,26 @@
                     <div class="course-keterangan">
                         <div class="atas">
                             <h3>Bahan Semikonduktor</h3>
-                            <a href="" class="btn">Pemahaman Teori</a>
+
                             <a class="pilihan" onclick="tampilkan(4)">
                                 <img src="imgs/dots.png" alt="" />
                             </a>
                             <div class="dropdown dropdown4" style="display: none">
                                 <span><a href="edit-teori.html">Edit</a></span>
-                                <span><a href="">Hapus</a></span>
+                                <span><a onclick="konfirmasi()">Hapus</a></span>
                             </div>
                         </div>
                         <p class="created">Dibuat pada : 25 Maret 2023</p>
-                        <p class="topik">18 Sub Topik</p>
-                        <p class="terdaftar text-center">34 Terdaftar</p>
+                        <div class="detail">
+                            <div class="soal">
+                                <img src="imgs/brush.png" alt="" />
+                                <span>35 Soal</span>
+                            </div>
+                            <div class="waktu">
+                                <img src="imgs/clock.png" alt="" />
+                                <span>01 : 30 : 00</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="course-detail">
@@ -167,18 +207,26 @@
                     <div class="course-keterangan">
                         <div class="atas">
                             <h3>Bahan Semikonduktor</h3>
-                            <a href="" class="btn">Pemahaman Teori</a>
+
                             <a class="pilihan" onclick="tampilkan(5)">
                                 <img src="imgs/dots.png" alt="" />
                             </a>
                             <div class="dropdown dropdown5" style="display: none">
                                 <span><a href="edit-teori.html">Edit</a></span>
-                                <span><a href="">Hapus</a></span>
+                                <span><a onclick="konfirmasi()">Hapus</a></span>
                             </div>
                         </div>
                         <p class="created">Dibuat pada : 25 Maret 2023</p>
-                        <p class="topik">18 Sub Topik</p>
-                        <p class="terdaftar text-center">34 Terdaftar</p>
+                        <div class="detail">
+                            <div class="soal">
+                                <img src="imgs/brush.png" alt="" />
+                                <span>35 Soal</span>
+                            </div>
+                            <div class="waktu">
+                                <img src="imgs/clock.png" alt="" />
+                                <span>01 : 30 : 00</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="course-detail">
@@ -186,18 +234,26 @@
                     <div class="course-keterangan">
                         <div class="atas">
                             <h3>Bahan Semikonduktor</h3>
-                            <a href="" class="btn">Pemahaman Teori</a>
+
                             <a class="pilihan" onclick="tampilkan(6)">
                                 <img src="imgs/dots.png" alt="" />
                             </a>
                             <div class="dropdown dropdown6" style="display: none">
                                 <span><a href="edit-teori.html">Edit</a></span>
-                                <span><a href="">Hapus</a></span>
+                                <span><a onclick="konfirmasi()">Hapus</a></span>
                             </div>
                         </div>
                         <p class="created">Dibuat pada : 25 Maret 2023</p>
-                        <p class="topik">18 Sub Topik</p>
-                        <p class="terdaftar text-center">34 Terdaftar</p>
+                        <div class="detail">
+                            <div class="soal">
+                                <img src="imgs/brush.png" alt="" />
+                                <span>35 Soal</span>
+                            </div>
+                            <div class="waktu">
+                                <img src="imgs/clock.png" alt="" />
+                                <span>01 : 30 : 00</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="course-detail">
@@ -205,18 +261,26 @@
                     <div class="course-keterangan">
                         <div class="atas">
                             <h3>Bahan Semikonduktor</h3>
-                            <a href="" class="btn">Pemahaman Teori</a>
+
                             <a class="pilihan" onclick="tampilkan(7)">
                                 <img src="imgs/dots.png" alt="" />
                             </a>
                             <div class="dropdown dropdown7" style="display: none">
                                 <span><a href="edit-teori.html">Edit</a></span>
-                                <span><a href="">Hapus</a></span>
+                                <span><a onclick="konfirmasi()">Hapus</a></span>
                             </div>
                         </div>
                         <p class="created">Dibuat pada : 25 Maret 2023</p>
-                        <p class="topik">18 Sub Topik</p>
-                        <p class="terdaftar text-center">34 Terdaftar</p>
+                        <div class="detail">
+                            <div class="soal">
+                                <img src="imgs/brush.png" alt="" />
+                                <span>35 Soal</span>
+                            </div>
+                            <div class="waktu">
+                                <img src="imgs/clock.png" alt="" />
+                                <span>01 : 30 : 00</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="course-detail">
@@ -224,18 +288,26 @@
                     <div class="course-keterangan">
                         <div class="atas">
                             <h3>Bahan Semikonduktor</h3>
-                            <a href="" class="btn">Pemahaman Teori</a>
+
                             <a class="pilihan" onclick="tampilkan(8)">
                                 <img src="imgs/dots.png" alt="" />
                             </a>
                             <div class="dropdown dropdown8" style="display: none">
                                 <span><a href="edit-teori.html">Edit</a></span>
-                                <span><a href="">Hapus</a></span>
+                                <span><a onclick="konfirmasi()">Hapus</a></span>
                             </div>
                         </div>
                         <p class="created">Dibuat pada : 25 Maret 2023</p>
-                        <p class="topik">18 Sub Topik</p>
-                        <p class="terdaftar text-center">34 Terdaftar</p>
+                        <div class="detail">
+                            <div class="soal">
+                                <img src="imgs/brush.png" alt="" />
+                                <span>35 Soal</span>
+                            </div>
+                            <div class="waktu">
+                                <img src="imgs/clock.png" alt="" />
+                                <span>01 : 30 : 00</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="course-detail">
@@ -243,18 +315,26 @@
                     <div class="course-keterangan">
                         <div class="atas">
                             <h3>Bahan Semikonduktor</h3>
-                            <a href="" class="btn">Pemahaman Teori</a>
+
                             <a class="pilihan" onclick="tampilkan(9)">
                                 <img src="imgs/dots.png" alt="" />
                             </a>
                             <div class="dropdown dropdown9" style="display: none">
                                 <span><a href="edit-teori.html">Edit</a></span>
-                                <span><a href="">Hapus</a></span>
+                                <span><a onclick="konfirmasi()">Hapus</a></span>
                             </div>
                         </div>
                         <p class="created">Dibuat pada : 25 Maret 2023</p>
-                        <p class="topik">18 Sub Topik</p>
-                        <p class="terdaftar text-center">34 Terdaftar</p>
+                        <div class="detail">
+                            <div class="soal">
+                                <img src="imgs/brush.png" alt="" />
+                                <span>35 Soal</span>
+                            </div>
+                            <div class="waktu">
+                                <img src="imgs/clock.png" alt="" />
+                                <span>01 : 30 : 00</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -272,9 +352,7 @@
                         <img src="imgs/arrow-circle-right.png" alt="" />
                     </div>
                 </div>
-                <div class="bagian">
-                    <a href="hapus-teori.html" class="btn materi">Materi Terhapus</a>
-                </div>
+                <div class="bagian"></div>
             </div>
         </div>
 
@@ -283,6 +361,24 @@
     <script src="js/loadHtml.js"></script>
     <script src="js/bootstrap.js"></script>
     <script>
+        let bgKonfirmasi = document.querySelector(".bg-konfirmasi");
+
+        function move() {
+            window.location = "dashboard-instruktur.html";
+        }
+
+        function konfirmasi() {
+            bgKonfirmasi.style.display = "flex";
+        }
+
+        function tutup() {
+            bgKonfirmasi.style.display = "none";
+        }
+
+        function daftar() {
+            move();
+        }
+
         function tampilkan(no) {
             let dropdown = document.querySelector(".container .courses .course-detail div.atas .dropdown" + no);
             dropdown.classList.toggle("muncul");
