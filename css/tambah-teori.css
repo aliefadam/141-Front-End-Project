@@ -195,8 +195,9 @@ nav .dropdown-menu {
 .container .editor .editor-detail form {
     height: 100%;
     padding: 0;
-    height: calc(100% - 110px);
+    height: calc(100% - 100px);
     border: none;
+    overflow-y: scroll;
 }
 
 .container .editor .editor-detail #inputText {
