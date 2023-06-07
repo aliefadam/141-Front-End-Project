@@ -519,6 +519,32 @@ nav .dropdown-menu {
     margin-left: 6%;
 }
 
+.container .qna .aksi {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: 6%;
+}
+
+.container .qna .aksi .btn {
+    font-size: 13px;
+    font-family: "Poppins-SemiBold";
+    width: 150px;
+}
+
+.container .qna .aksi .btn.batal {
+    background-color: #e9ebf8;
+    color: #396eb0;
+    border: 1px solid #396eb0;
+    margin-right: 15px;
+}
+
+.container .qna .aksi .btn.kirim {
+    color: white;
+    background-color: #396eb0;
+}
+
 .container .qna img {
     width: 50px;
     margin-right: 20px;

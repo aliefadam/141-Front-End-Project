@@ -78,12 +78,19 @@
             </div>
 
             <div class="qna">
-                <div class="asking" style="cursor: pointer" onclick="detail()">
-                    <img src="imgs/Ellipse 14.png" alt="" />
-                    <form action="">
-                        <input type="text" placeholder="Apa yang ingin anda tanyakan?" />
-                    </form>
+                <div class="asking box-pertanyaan" style="cursor: pointer">
+                    <div class="asking-detail">
+                        <img src="imgs/Ellipse 14.png" alt="" />
+                        <form action="">
+                            <input class="input-pertanyaan4" type="text" placeholder="Apa yang ingin anda tanyakan?" onclick="tampil()" />
+                        </form>
+                    </div>
+                    <div class="aksi4" style="display: none">
+                        <button class="btn batal">Batal</button>
+                        <button class="btn kirim">Kirim Jawaban</button>
+                    </div>
                 </div>
+
                 <div class="box">
                     <div class="question" style="cursor: pointer" onclick="detail()">
                         <div class="kiri">
@@ -127,8 +134,12 @@
                     <div class="reply">
                         <img src="imgs/Ellipse 14.png" alt="" />
                         <form action="">
-                            <input type="text" placeholder="Apa yang ingin anda tanyakan?" />
+                            <input class="input-pertanyaan" type="text" placeholder="Apa yang ingin anda tanyakan?" onclick="showButton()" />
                         </form>
+                    </div>
+                    <div class="aksi" style="display: none">
+                        <button class="btn batal">Batal</button>
+                        <button class="btn kirim">Kirim Jawaban</button>
                     </div>
                 </div>
             </div>
@@ -177,8 +188,12 @@
                     <div class="reply">
                         <img src="imgs/Ellipse 14.png" alt="" />
                         <form action="">
-                            <input type="text" placeholder="Apa yang ingin anda tanyakan?" />
+                            <input class="input-pertanyaan2" type="text" placeholder="Apa yang ingin anda tanyakan?" onclick="showButton2()" />
                         </form>
+                    </div>
+                    <div class="aksi aksi2" style="display: none">
+                        <button class="btn batal">Batal</button>
+                        <button class="btn kirim">Kirim Jawaban</button>
                     </div>
                 </div>
             </div>
@@ -226,8 +241,12 @@
                     <div class="reply">
                         <img src="imgs/Ellipse 14.png" alt="" />
                         <form action="">
-                            <input type="text" placeholder="Apa yang ingin anda tanyakan?" />
+                            <input class="input-pertanyaan3" type="text" placeholder="Apa yang ingin anda tanyakan?" onclick="showButton3()" />
                         </form>
+                    </div>
+                    <div class="aksi aksi3" style="display: none">
+                        <button class="btn batal">Batal</button>
+                        <button class="btn kirim">Kirim Jawaban</button>
                     </div>
                 </div>
             </div>
@@ -262,8 +281,75 @@
     <script src="js/loadHtml.js"></script>
     <script src="js/bootstrap.js"></script>
     <script>
-        function detail() {
-            window.location = "detail-qna.html";
+        document.addEventListener("click", function (event) {
+            let pertanyaan = document.querySelector(".pertanyaan");
+            let box_pertanyaan = document.querySelector(".box-pertanyaan");
+
+            if (event.target !== pertanyaan && event.target === box_pertanyaan) {
+                window.location = "detail-qna.html";
+            }
+        });
+
+        function showButton() {
+            let aksi = document.querySelector(".aksi");
+            aksi.style.display = "flex";
+        }
+
+        document.addEventListener("click", function (event) {
+            let aksi = document.querySelector(".aksi");
+            let input = document.querySelector(".input-pertanyaan");
+
+            if (event.target !== input && event.target !== aksi) {
+                aksi.style.display = "none";
+            }
+        });
+
+        function showButton2() {
+            let aksi2 = document.querySelector(".aksi2");
+            aksi2.style.display = "flex";
+        }
+
+        document.addEventListener("click", function (event) {
+            let aksi2 = document.querySelector(".aksi2");
+            let input2 = document.querySelector(".input-pertanyaan2");
+
+            if (event.target !== input2 && event.target !== aksi2) {
+                aksi2.style.display = "none";
+            }
+        });
+
+        function showButton3() {
+            let aksi3 = document.querySelector(".aksi3");
+            aksi3.style.display = "flex";
+        }
+
+        document.addEventListener("click", function (event) {
+            let aksi3 = document.querySelector(".aksi3");
+            let input3 = document.querySelector(".input-pertanyaan3");
+
+            if (event.target !== input3 && event.target !== aksi3) {
+                aksi3.style.display = "none";
+            }
+        });
+
+        function showButton4() {
+            aletrt("tes");
+            let aksi4 = document.querySelector(".aksi4");
+            aksi4.style.display = "flex";
+        }
+
+        document.addEventListener("click", function (event) {
+            let aksi4 = document.querySelector(".aksi4");
+            let input4 = document.querySelector(".input-pertanyaan4");
+
+            if (event.target !== input4 && event.target !== aksi4) {
+                aksi4.style.display = "none";
+            }
+        });
+
+        function tampil() {
+            let aksi4 = document.querySelector(".aksi4");
+            aksi4.style.display = "flex";
         }
     </script>
 </html>

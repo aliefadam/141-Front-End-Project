@@ -130,11 +130,14 @@ nav .dropdown-menu {
 }
 
 .container .qna .asking {
-    display: flex;
-    align-items: center;
     padding: 20px;
     border-radius: 15px;
     border: 1px solid #6a6a6a;
+}
+
+.container .qna .asking-detail {
+    display: flex;
+    align-items: center;
 }
 
 .container .qna img {
@@ -250,6 +253,45 @@ nav .dropdown-menu {
     display: flex;
     align-items: center;
     margin-left: 6%;
+}
+
+.container .qna .aksi,
+.container .qna .aksi4 {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: 6%;
+}
+
+.container .qna .aksi,
+.container .qna .aksi4 {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: 6%;
+}
+
+.container .qna .aksi .btn,
+.container .qna .aksi4 .btn {
+    font-size: 13px;
+    font-family: "Poppins-SemiBold";
+    width: 150px;
+}
+
+.container .qna .aksi4 .btn.batal,
+.container .qna .aksi .btn.batal {
+    background-color: #e9ebf8;
+    color: #396eb0;
+    border: 1px solid #396eb0;
+    margin-right: 15px;
+}
+
+.container .qna .aksi .btn.kirim,
+.container .qna .aksi4 .btn.kirim {
+    color: white;
+    background-color: #396eb0;
 }
 
 .container .qna img {

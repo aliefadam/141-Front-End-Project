@@ -95,8 +95,12 @@
                     <div class="reply">
                         <img src="imgs/Ellipse 14.png" alt="" />
                         <form action="">
-                            <textarea name="" id="" placeholder="Tulis Jawaban anda..."></textarea>
+                            <textarea class="input-pertanyaan" name="" id="" placeholder="Tulis Jawaban anda..." onclick="showButton()"></textarea>
                         </form>
+                    </div>
+                    <div class="aksi" style="display: none">
+                        <button class="btn batal">Batal</button>
+                        <button class="btn kirim">Kirim Jawaban</button>
                     </div>
                 </div>
             </div>
@@ -175,4 +179,19 @@
     </body>
     <script src="js/loadHtml.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script>
+        function showButton() {
+            let aksi = document.querySelector(".aksi");
+            aksi.style.display = "flex";
+        }
+
+        document.addEventListener("click", function (event) {
+            let aksi = document.querySelector(".aksi");
+            let input = document.querySelector(".input-pertanyaan");
+
+            if (event.target !== input && event.target !== aksi) {
+                aksi.style.display = "none";
+            }
+        });
+    </script>
 </html>

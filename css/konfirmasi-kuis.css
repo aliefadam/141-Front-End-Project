@@ -254,6 +254,18 @@ nav .dropdown-menu {
     margin-right: 10px;
 }
 
+.container .box form div input[type="text"] {
+    border: 1px solid #bbb !important;
+    width: 10% !important;
+    height: 30px;
+    padding: 2px;
+}
+
+.container .box .editor-detail .kiri .editor {
+    outline: none;
+    border: none;
+}
+
 .container .other {
     margin-top: 50px;
     display: flex;
@@ -299,4 +311,22 @@ nav .dropdown-menu {
     letter-spacing: 1.3px;
     height: 30px;
     font-size: 12px;
+}
+
+.container .editor .inline-editor {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    width: calc(100% - 40px);
+    height: 45px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.container .editor .inline-editor img {
+    width: 20px;
+    margin-right: 15px;
+    cursor: pointer;
 }

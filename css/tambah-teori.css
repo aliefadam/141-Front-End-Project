@@ -175,8 +175,21 @@ nav .dropdown-menu {
     height: 500px;
 }
 
-.container .editor .editor-detail img {
-    width: 100%;
+.container .editor .editor-detail .inline-editor {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    width: calc(100% - 40px);
+    height: 45px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.container .editor .editor-detail .inline-editor img {
+    margin-right: 15px;
+    cursor: pointer;
 }
 
 .container .editor .editor-detail form {
@@ -186,7 +199,7 @@ nav .dropdown-menu {
     border: none;
 }
 
-.container .editor .editor-detail textarea {
+.container .editor .editor-detail #inputText {
     width: calc(100% - 40px);
     margin-left: 20px;
     padding: 10px;
@@ -194,4 +207,21 @@ nav .dropdown-menu {
     outline: none;
     border: none;
     text-align: justify;
+    color: #999;
+}
+
+.container .editor .editor-detail .editor {
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    padding: 10px;
+    height: 100%;
+    outline: none;
+    border: none;
+    text-align: justify;
+    color: black;
+}
+
+.placeholders {
+    color: #999;
+    background-color: none !important;
 }

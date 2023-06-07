@@ -231,7 +231,6 @@ nav .dropdown-menu {
 
 .container .box .bg-form .form .jawaban {
     margin-top: 20px;
-    height: 100px;
 }
 
 .container .box .bg-form .form .jawaban form {
@@ -239,8 +238,18 @@ nav .dropdown-menu {
     flex-direction: column;
 }
 
+.container .box .bg-form .form .jawaban form div {
+    margin-bottom: 5px;
+}
+
 .container .box .bg-form .form .jawaban form input {
     margin-right: 5px;
+}
+
+.container .box .bg-form .form .jawaban form input[type="text"] {
+    width: 10%;
+    padding: 2px;
+    outline: none;
 }
 
 .container .box .bg-form .form .jawaban form label {

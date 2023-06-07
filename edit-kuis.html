@@ -135,30 +135,50 @@
                     <a href="edit-kuis.html" class="btn edit">Selesai</a>
                 </div>
                 <div class="editor">
-                    <img src="imgs/Frame 4725.png" alt="" />
+                    <div class="inline-editor">
+                        <img src="imgs/bold.png" alt="" onclick="execCommand('bold')" class="ms-3" />
+                        <img src="imgs/italic.png" alt="" onclick="execCommand('italic')" />
+                        <img src="imgs/underline.png" alt="" onclick="execCommand('underline')" />
+                        <img src="imgs/strikeThrough.png" alt="" onclick="execCommand('strikethrough')" />
+                        <img src="imgs/textColor.png" alt="" />
+                        <img src="imgs/backgroundColor.png" alt="" />
+                        <img src="imgs/smile.png" alt="" onclick="" class="me-5" />
+                        <img src="imgs/Dropdown.png" alt="" onclick="" />
+                        <img src="imgs/Dropdown-1.png" alt="" onclick="" />
+                        <img src="imgs/Dropdown-2.png" alt="" onclick="" />
+                        <img src="imgs/Dropdown-3.png" alt="" onclick="" />
+                        <img src="imgs/indent.png" alt="" onclick="" />
+                        <img src="imgs/outdent.png" alt="" onclick="" class="me-5" />
+                        <img src="imgs/insertImage.png" alt="" onclick="" />
+                        <img src="imgs/insertLink.png" alt="" onclick="" />
+                        <img src="imgs/insertFile.png" alt="" onclick="" />
+                        <img src="imgs/insertVideo.png" alt="" onclick="" />
+                        <img src="imgs/undo.png" alt="" onclick="" />
+                        <img src="imgs/redo.png" alt="" onclick="" />
+                    </div>
                     <div class="editor-detail">
                         <div class="kiri">
-                            <input type="text" value="1. Substansi dasar pembentukan sebuah materi adalah ?" autofocus />
+                            <div class="editor" contenteditable="true" id="editor">1. Substansi dasar pembentukan sebuah materi adalah ?</div>
                             <form action="">
                                 <div>
                                     <input type="radio" name="soal1" id="jawaban1" />
-                                    <label for="jawaban1">Elektron</label>
+                                    <input type="text" name="" id="" placeholder="Unsur" />
                                 </div>
                                 <div>
                                     <input type="radio" name="soal1" id="jawaban2" />
-                                    <label for="jawaban2">Unsur</label>
+                                    <input type="text" name="" id="" placeholder="Molekul" />
                                 </div>
                                 <div>
                                     <input type="radio" name="soal1" id="jawaban3" />
-                                    <label for="jawaban3">Molekul</label>
+                                    <input type="text" name="" id="" placeholder="Sel" />
                                 </div>
                                 <div>
                                     <input type="radio" name="soal1" id="jawaban4" />
-                                    <label for="jawaban4">Atom</label>
+                                    <input type="text" name="" id="" placeholder="Quarks" />
                                 </div>
                                 <div>
                                     <input type="radio" name="soal1" id="jawaban5" />
-                                    <label for="jawaban5">Quarks</label>
+                                    <input type="text" name="" id="" placeholder="Atom" />
                                 </div>
                             </form>
                         </div>
@@ -439,6 +459,16 @@
         function tampilkan(no) {
             let dropdown = document.querySelector(".container .courses .course-detail div.atas .dropdown" + no);
             dropdown.classList.toggle("muncul");
+        }
+
+        const editor = document.getElementById("editor");
+
+        function execCommand(command) {
+            document.execCommand(command, false, null);
+        }
+
+        function setTextColor(color) {
+            document.execCommand("foreColor", false, color);
         }
     </script>
 </html>
